@@ -34,6 +34,22 @@
     }
     $porc_R = ($reprobado) / $n * (100);
     $porc_A = ($aprobado) / $n * (100);
+$sd=0;
+for($x=0;$x<$t;$x++){$sd=$sd+(($b[$x]-$avg)*($b[$x]-$avg));}
+$stdDev=sqrt($sd/$t);
+echo "Desviacion: ",$stdDev;
+
+$c=0;
+echo "<table border='1'>";
+while($c<=$t-29){
+echo"<tr>";
+for($d=0;$d<=29;$d++){
+echo "<td>",$b[$c],"</td>";
+$c++;}
+echo"</tr>";
+}
+echo "</table>";
+
     
 
 
